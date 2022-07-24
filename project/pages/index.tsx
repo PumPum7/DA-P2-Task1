@@ -1,17 +1,16 @@
 import {GetServerSideProps} from "next";
 
-export default function IndexPage(props: {host: string, url: string}) {
-	console.log(props)
+export default function IndexPage() {
 	return (
 		<div>Home</div>
 	)
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getServerSideProps: GetServerSideProps = async () => {
 	return {
-		props: {
-			host: context.req.headers.host,
-			url: context.req.url
+		redirect: {
+			destination: "/Pum",
+			permanent: true
 		}
 	}
 }

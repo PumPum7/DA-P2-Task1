@@ -18,15 +18,9 @@ export default function Home(props: ProfileData) {
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-	console.log("name")
-	console.log(process.env.NODE_ENV)
-	console.log(context.req.url)
-
 	const name = context.req.url?.replace("/", "")
 
 	const host = context.req.headers.host
-
-	console.log(`${process.env.NODE_ENV === "production" ? "https://" : "http://"}` + host + `/api/profile?name=${!!name ? name : "Pum"}`)
 
 	// default name is pum
 	const res = await fetch(`${process.env.NODE_ENV === "production" ? "https://" : "http://"}` + host + `/api/profile?name=${!!name ? name : "Pum"}`)
