@@ -26,6 +26,8 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
 	const host = context.req.headers.host
 
+	console.log(process.env.NODE_ENV === "production" ? "https://" : "http://" + host + `/api/profile?name=${!!name ? name : "Pum"}`)
+
 	// default name is pum
 	const res = await fetch(process.env.NODE_ENV === "production" ? "https://" : "http://" + host + `/api/profile?name=${!!name ? name : "Pum"}`)
 
