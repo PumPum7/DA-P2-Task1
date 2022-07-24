@@ -81,7 +81,7 @@ export default function Create() {
 				             job={jobRef.current ? jobRef.current.value : "<Job>"}
 				             country={countryRef.current ? countryRef.current.value : "<Country>"}
 				             focus={focusRef.current ? focusRef.current.value : "<Focus>"}
-				             hobbies={hobbyRef.current ? hobbyRef.current.value : "<hobbies>"} avatar={pictureRef.current ? pictureRef.current.value : "<Avatar>"}/>
+				             hobbies={hobbyRef.current ? hobbyRef.current.value : "<hobbies>"} avatar={pictureRef.current ? pictureRef.current.value : "https://via.placeholder.com/200.png?text=Placeholder"}/>
 			</section>
 		</main>
 	)
