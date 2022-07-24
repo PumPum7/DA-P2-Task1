@@ -4,6 +4,7 @@ type ProfileData = {
 	country: string;
 	focus: string;
 	hobbies: string;
+	avatar: string;
 }
 
 export default ProfileData

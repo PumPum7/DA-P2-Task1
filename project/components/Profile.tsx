@@ -1,4 +1,3 @@
-import Image from "next/image";
 import ProfileData from "../types/ProfileData";
 
 
@@ -11,7 +10,7 @@ export default function ProfilePage(props: ProfileData) {
 					I currently focus on {props.focus}<br/>
 					In my free time I like to {props.hobbies}</p>
 			</div>
-			<Image src={"/avatar.png"} width={200} height={200} className="rounded-full"/>
+			<img src={props.avatar} width={200} height={200} className="rounded-full" alt={"Profile Image"}/>
 		</section>
 	)
 }
